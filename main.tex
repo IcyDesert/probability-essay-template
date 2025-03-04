@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{array}
+\usepackage{setspace} % 扩展表格功能
+\usepackage{enumitem} % 用于自定义列表样式
+\usepackage{titlesec} % 用于自定义标题格式
+\usepackage[a4paper, margin=2.2cm, left=2.5cm]{geometry}
+\usepackage[style=gb7714-2015, citestyle=numeric, backend=bibtex8]{biblatex}
+
+
+\zihao{-4}
+\setstretch{1.25}
+\setCJKmainfont{simsun.ttc}[AutoFakeBold]
+\setmainfont{Times New Roman}
+
+% 图片放在 figure 文件夹里 
+\graphicspath{{./figure/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
+
+\addbibresource{db.bib} 
+\defbibheading{bibliography}[\refname]{
+    \centering % 居中
+    \zihao{-2}\heiti
+    \textbf{参考文献} % 设置标题
+    \vspace{1em} % 设置标题与内容之间的间距
+}
+
+% 一些自定义的指令，方便用于数学公式
+\newcommand{\dx}{\mathrm{d}x} % dx
+\newcommand{\dy}{\mathrm{d}y} % dy
+\newcommand{\dif}[1]{\mathrm{d}#1} % 对任意字母进行微分，如 \dif{z}
+\newcommand{\abso}[1]{\lvert#1\rvert} % 绝对值符号，如\abso{x}
+
+\begin{document}
+% 封面页信息
+{\centering\zihao{2}
+    \textbf{概率论与数理统计课程小论文} \\
+    \vspace*{1em}
+    {\heiti 这是题目} \\
+}
+\vspace*{8em}
+\begin{center}
+    {\bfseries\zihao{-2}
+        \begin{tabular}{|>{\centering\arraybackslash}m{3cm}|c|}
+            \hline
+            班 \quad 号  & 23******   \\
+            \hline
+            学 \quad 号 & 23********** \\
+            \hline
+            姓 \quad 名 & 某某某        \\
+            \hline
+            日 \quad 期 & 2024.12.** \\
+            \hline
+            得 \quad 分 &            \\
+            \hline
+        \end{tabular}
+    }
+\end{center}
+\newpage
+% 摘要及关键词
+{\centering
+    \bfseries\zihao{-2}\heiti 摘\quad 要\par
+    % 神秘，不加 \par 无法居中
+}
+
+摘要是论文内容的高度概括，应具有独立性和自含性，即不阅读论文的全文，就能获得必要的信息。摘要应包括本论文的目的、主要研究内容、研究方法、创造性成果及其理论与实际意义。摘要中不宜使用公式、化学结构式、图表和非公知公用的符号与术语，不标注引用文献编号，同时避免将摘要写成目录式的内容介绍。\\ 
+
+关键词：关键词1；关键词2；…… \\
+
+% 标题
+{
+\zihao{3}\noindent\textbf{课题背景及研究的目的和意义} \\
+}
+
+1828年，R.R.Willis发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。
+
+\newpage
+\printbibliography
+\vfill
+\begin{center}
+    \zihao{5}
+    本文使用\LaTeX 进行写作
+\end{center}
+\end{document}
