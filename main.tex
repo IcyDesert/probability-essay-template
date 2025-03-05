@@ -1,6 +1,5 @@
 \documentclass{article}
 \usepackage{amsmath}
-\usepackage{extarrows}
 \usepackage[UTF8]{ctex}
 \usepackage{graphicx}
 \usepackage{fontspec}
@@ -21,7 +20,8 @@
 \graphicspath{{./figure/}}
 \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
 
-\addbibresource{db.bib} 
+% 参考文献文件名
+\addbibresource{db.bib}
 \defbibheading{bibliography}[\refname]{
     \centering % 居中
     \zihao{-2}\heiti
@@ -77,6 +77,8 @@
 }
 
 1828年，R.R.Willis发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。
+
+这是参考文献写法\cite{fenbuhanshu}
 
 \newpage
 \printbibliography
