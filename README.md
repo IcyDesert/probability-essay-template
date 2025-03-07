@@ -2,8 +2,8 @@
 
 ## 仓库说明
 
-`main.tex` 主文件，进行 LaTeX 写作
-`db.bib` 参考文献文件
+- `main.tex` 主文件，进行 LaTeX 写作
+- `db.bib` 参考文献文件
 
 ## 注意事项
 
